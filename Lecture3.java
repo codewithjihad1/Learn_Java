@@ -1,9 +1,15 @@
 import java.util.Scanner;
 
-public class Lecture2 {
+public class Lecture3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        // int age = sc.nextInt();
+        String oper = sc.nextLine();
+        int a = sc.nextInt();
+        int b = sc.nextInt();
         int n = sc.nextInt();
+        
+
 
         // find Odd or Even 
         if(n %2 == 0) {
@@ -13,9 +19,6 @@ public class Lecture2 {
         }
 
         // input 2 number a,b then (a==b) print equal, (a>b) print A is Greater, (a<b) print a is smaller
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-
         if(a==b){
             System.out.println("A is equal.");
         } else if(a>b){
@@ -42,6 +45,30 @@ public class Lecture2 {
             }else {
                 System.out.println("Invalid numbers.");
             }
+        }
+
+
+        /**
+         * Calculator 
+         */
+        switch (oper) {
+            case "+":
+                System.out.println(a+b);
+                break;
+            case "-":
+                System.out.println(a-b);
+                break;
+            case "*":
+                System.out.println(a*b);
+                break;
+            case "/":
+                System.out.println(a/b);
+                break;
+            case "%":
+                System.out.println(a%b);
+                break;
+            default:
+                System.out.println("Enter a valid number.");
         }
     }
 }
