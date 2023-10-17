@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Lecture8 {
     /**
@@ -104,17 +104,58 @@ public class Lecture8 {
     }
 
 
+    /**
+     * Q:- Two numbers are entered by the user, x and n. Write a function to find the value of one number raised to the power of another i.e..
+     * Description: input two value and x power n (x^n)
+     * @param args
+     */
+    public static int calculateExpo(int x, int n){
+        int result = (int) Math.pow(x, n);
+        return result;
+    }   
 
 
+    /**
+     * Q:- Write a function that calculates the Greatest Common Divisor of 2 numbers.
+     * @param args
+     */
+    public static String findGCD(int a, int b) {
+        int gcd = 1;
+        for(int i=1; i <= a && i <= b; i++) {
+            if(a%i == 0 && b%i ==0) {
+                gcd = i;
+            }
+        }
+
+        return "Greatest Common Divider is: " + gcd;
+    }
 
 
+    /**
+     * Q:- Write a program to print Fibonacci series of n terms where n is input by user :0 1 1 23581321.....
+     * @param args
+     */
+    public static void fibonacciSeries(int n) {
+        int a = 0, b = 1;
+        // check nagative value
+        if(n > 1) {
+            System.out.print(a +" ");
+            for(int i=2; i <=n; i++) {
+                System.out.print(b + " ");
+                int temp = b;
+                b = a + b;
+                a = temp;
+            }
+        }
+    }
 
     // This is a main method in Java.
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // int a = sc.nextInt();
+        int a = sc.nextInt();
         // int b = sc.nextInt();
 
-        userInputValCount();
+        // System.out.println(fibonacciSeries(a));
+        fibonacciSeries(a);
     }
  }
