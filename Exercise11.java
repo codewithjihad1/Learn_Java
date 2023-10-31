@@ -4,6 +4,7 @@ import java.util.List;
 public class Exercise11 {
 
     /**
+     * Print the spiral order matrix as output for a given matrix of numbers. 
      * Link: https://algodaily.com/challenges/traverse-a-matrix-in-spiral-order
      * @param matrix
      * @return
@@ -49,6 +50,26 @@ public class Exercise11 {
     }
 
 
+    /**
+     * For a given matrix of N x M, print its transpose.
+     * @param matrix
+     */
+    public static void transpose(int[][] matrix) {
+        int n = matrix.length;
+        int m = matrix[0].length;
+
+        for(int col=0; col < m; col++) {
+            for(int row=0; row < n; row++) {
+                System.out.print(matrix[row][col] + " ");
+            }
+            System.out.println();
+        }
+
+        
+
+    }
+
+
     public static void main(String[] args) {
         int a[][] = {   {1, 2, 3, 4},
                         {5, 6, 7, 8},
@@ -57,7 +78,7 @@ public class Exercise11 {
                         {17, 18, 19, 20} 
                     };
 
-        spiralOrder(a);
+        transpose(a);
     }
 }
 
